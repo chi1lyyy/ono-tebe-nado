@@ -77,7 +77,6 @@
   height: 100%;
   z-index: 0;
   background-color: rgb(0 0 0 / 0.6);
-
 }
 
 .cover-title {
@@ -144,11 +143,10 @@
   height: 50px;
   width: 255px;
   word-spacing: normal;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   align-self: center;
-  
 }
 
 .lots {
@@ -169,7 +167,7 @@
   flex-wrap: wrap;
   flex-grow: 1;
   flex-direction: row;
-  
+
   justify-content: space-between;
 }
 
@@ -178,8 +176,6 @@
   display: block;
   margin-top: 27px;
   width: 334px;
- 
-
 }
 
 .card-link {
