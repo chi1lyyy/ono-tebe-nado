@@ -53,9 +53,8 @@
 }
 
 .cover {
-  height: 757px;
-  font-size: 0;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .cover-image {
@@ -65,10 +64,8 @@
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  display: block;
-  height: 100%;
-  padding: 0;
-  margin: 0;
+  min-height: 757px;
+
 }
 
 .overlay {
@@ -77,6 +74,8 @@
   height: 100%;
   z-index: 0;
   background-color: rgb(0 0 0 / 0.6);
+  top: 0;
+  right: 0;
 }
 
 .cover-title {
@@ -84,39 +83,30 @@
   font-size: 100px;
   line-height: 120px;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 30px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  padding: 165px 50px 0;
 }
 
 .aligned-text {
-  display: flex;
-  padding-top: 165px;
-  padding-left: 50px;
   padding-bottom: 5px;
 }
 
 .aligned-text-center {
-  display: flex;
-  justify-content: center;
-  padding-right: 55px;
+  align-self: center;
+  padding-right: 60px;
 }
 
 .aligned-text-right {
-  display: flex;
   align-self: flex-end;
-  justify-content: flex-end;
-  padding-right: 50px;
-  padding-left: 633px;
 }
 
 .letter-spacing-extended {
   padding-left: 60px;
-  padding-right: 0;
 }
 
 .no-letter-spacing {
-  padding-right: 0;
   letter-spacing: 0;
 }
 
@@ -130,7 +120,6 @@
 .cover-description-text {
   padding-left: 2px;
   align-self: center;
-  text-transform: uppercase;
   font-size: 22px;
   word-spacing: 19px;
   font-weight: normal;
@@ -140,16 +129,17 @@
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
-  height: 50px;
-  width: 255px;
-  word-spacing: normal;
-  font-family: "Raleway", sans-serif;
+  min-height: 50px;
+  min-width: 255px;
+  font-family: 'Raleway', sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   align-self: center;
 }
 
 .lots {
+  display: flex;
+  flex-direction: column;
   margin: 178px 24px 147px 24px;
 }
 
@@ -167,7 +157,6 @@
   flex-wrap: wrap;
   flex-grow: 1;
   flex-direction: row;
-
   justify-content: space-between;
 }
 
@@ -184,36 +173,32 @@
 }
 
 .card {
-  min-width: 334px;
-  height: 563px;
+  position: relative;
+  min-height: 563px;
   color: #fff;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
   padding: 50px 40px;
+  background-position: center;
+  background-size: cover;
 }
 
 .card-type-film {
   background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card-type-book {
   background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card-type-picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card-title {
-  display: flex;
+  z-index: 2;
   font-size: 22px;
   text-decoration: underline;
   text-transform: uppercase;
@@ -221,8 +206,8 @@
 }
 
 .card-text {
+  z-index: 2;
   font-size: 20px;
-  font-weight: normal;
   line-height: 120%;
   text-align: left;
 }
@@ -238,21 +223,23 @@
 
 .about {
   display: flex;
-  height: 595px;
   margin: 0 24px 180px;
 }
 
 .about-logo {
+  display: flex;
   width: 240px;
   height: 240px;
   border-radius: 50%;
   background-color: #000;
   margin: 35px 73px 320px 47px;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-logo-image {
-  height: 47%;
-  margin-top: 63px;
+  min-width: 148px;
+  min-height: 114px;
   background-image: url(../images/logo-white.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -263,7 +250,7 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  width: 693px;
+  width: 695px;
   text-align: left;
   padding-top: 136px;
 }
@@ -281,23 +268,21 @@
   word-spacing: 1px;
 }
 
+.about-text:last-child {
+  padding-bottom: 0;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 185px;
   margin: 180px 50px 88px;
   font-size: 18px;
 }
 
-.footer .address {
-  line-height: 135%;
-  letter-spacing: 0.2px;
-}
-
 .footer-menu {
   text-align: center;
-  margin-left: 33px;
+  margin-left: 40px;
 }
 
 .footer-menu-list {
@@ -310,6 +295,11 @@
 }
 
 .footer-list-item {
+  list-style-type: none;
+}
+
+.social-icon {
+  display: block;
   width: 48px;
   height: 48px;
 }
